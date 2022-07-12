@@ -1,0 +1,24 @@
+.Login {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    font-size: 0.1rem;
+    color: white;
+    display: flex;
+}
+
+label {
+    padding-left: 0.5rem;
+    padding-right: 0.3rem;
+}
+
+.test {
+    display: flex;
+}
+
+.formgroup {
+    display: flex;
+    padding-left: 1rem;
+}
