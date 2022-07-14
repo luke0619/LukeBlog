@@ -1,14 +1,22 @@
 .layout {
     display: flex;
     justify-content: center;
-    padding-top: 0.2rem;
+    padding-top: 1.6rem;
 }
 
 .Blogs {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
     width: 100%;
     padding-bottom: 2rem;
     margin-top: 2rem;
 }
+
+.container {
+    display: flex;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+

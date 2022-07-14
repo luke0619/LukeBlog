@@ -1,7 +1,8 @@
 import Layout from '../components/Layout/Layout';
 import Single from '../components/single/Single';
 
-const ManagePage = () => {
+const SinglePage = () => {
+    
     return (
             <Layout>
                 <Single/>
@@ -9,4 +10,4 @@ const ManagePage = () => {
     )
 }
 
-export default ManagePage;
+export default SinglePage;

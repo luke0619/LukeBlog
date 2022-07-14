@@ -39,7 +39,7 @@ export async function getSingleQuote(quoteId) {
 }
 
 export async function addQuote(quoteData) {
-    const response = await fetch(`${FIREBASE_DOMAIN}/${quoteData.type}.json`, {
+    const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`, {
         method: 'POST',
         body: JSON.stringify(quoteData),
         headers: {
@@ -48,21 +48,8 @@ export async function addQuote(quoteData) {
     });
     const data = await response.json();
 
-    const response2 = await fetch(`${FIREBASE_DOMAIN}/quotes.json`, {
-        method: 'POST',
-        body: JSON.stringify(quoteData),
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    });
-    const data2 = await response.json();
-
     if (!response.ok) {
         throw new Error(data.message || 'Could not create quote.');
-    }
-
-    if (!response2.ok) {
-        throw new Error(data2.message || 'Could not create quote.');
     }
 
     return null;
@@ -111,3 +98,52 @@ export async function getAllComments(quoteId) {
 // export async function RemoveQuote(id) {
 //     const response = DELETE
 // }
+
+export async function getAllArticles(typeId) {
+    const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`);
+    const data = await response.json();
+
+    if (!response.ok) {
+        throw new Error(data.message || 'Could not fetch quotes.');
+    }
+
+    const transformedQuotes = [];
+
+    for (const key in data) {
+        const quoteObj = {
+            id: key,
+            ...data[key],
+        };
+
+        transformedQuotes.push(quoteObj);
+    }
+
+    const FilterQuotes = transformedQuotes.filter(item => item.type === typeId);
+
+    return FilterQuotes;
+}
+
+export async function getPartQuotes(type) {
+    const response = await fetch(`${FIREBASE_DOMAIN}/${type}.json`);
+    const data = await response.json();
+
+    if (!response.ok) {
+        throw new Error(data.message || 'Could not fetch quotes.');
+    }
+
+    const transformedQuotes = [];
+
+    for (const key in data) {
+        const quoteObj = {
+            id: key,
+            ...data[key],
+        };
+
+        transformedQuotes.push(quoteObj);
+    }
+
+    const PartQuotes = transformedQuotes.slice(0,5)
+
+    return PartQuotes;
+}
+

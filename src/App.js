@@ -1,11 +1,11 @@
 import { Switch, Route, Redirect } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import BlogPage from './pages/BlogPage';
 import ManagePage from './pages/ManagePage';
 import FormPage from './pages/FormPage';
 import SinglePage from './pages/SinglePage';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import IdPage from './pages/IdPage';
 
 function App() {
   return (
@@ -22,28 +22,12 @@ function App() {
         <FormPage />
       </Route>
 
-      <Route path='/life'>
+      <Route path='/single/:typeId'>
         <SinglePage/>
       </Route>
 
-      <Route path='/knowledge'>
-        <SinglePage/>
-      </Route>
-
-      <Route path='/sports'>
-        運動紀錄
-      </Route>
-
-      <Route path='/journey'>
-        旅行紀念
-      </Route>
-
-      <Route path='/box'>
-        開箱分享
-      </Route>
-
-      <Route path='/photo'>
-        攝影作品
+      <Route path='/unique/:articleId'>
+        <IdPage/>
       </Route>
 
       <Route path='*'>

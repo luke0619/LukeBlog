@@ -1,17 +1,25 @@
 .Login {
+    color: black;
     display: flex;
     justify-content: center;
+    background-color: white;
+    padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+    border-radius: 4px;
 }
 
 form {
     font-size: 0.1rem;
-    color: white;
+    color: black;
     display: flex;
 }
 
+form input{
+    font-size: 3rem;
+}
+
 label {
-    padding-left: 0.5rem;
-    padding-right: 0.3rem;
+    font-size: 1.2rem;
+    color: black;
 }
 
 .test {

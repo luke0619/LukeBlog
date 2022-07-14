@@ -1,0 +1,21 @@
+.BlogItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BlogItem {
+    width: 50%;
+    background-color:antiquewhite;
+    display: flex;
+    margin: 1rem 0rem 2rem 0rem;
+    padding: 2rem 0rem 2rem 2rem;
+}
+
+.content {
+    margin-left: 3rem;
+}
+
+.BlogItem img {
+    height: 15rem;
+}

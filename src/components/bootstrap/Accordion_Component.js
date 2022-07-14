@@ -1,11 +1,14 @@
 import Accordion from 'react-bootstrap/Accordion';
 import Button from 'react-bootstrap/Button';
-import { removeFirebaseData } from '../../lib/firebase-api';
+import { removeFirebaseData} from '../../lib/firebase-api';
+
 
 const Accordion_Components = (props) => {
+  
     const removeHandler = () => {
-        removeFirebaseData(props.id);       
+        removeFirebaseData(props.id);
     }
+
 
     return (
         <Accordion>

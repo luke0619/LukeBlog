@@ -66,12 +66,12 @@ const Login = () => {
                     <div className={classes.test}>
                         <Form.Group controlId="formBasicEmail" className={classes.formgroup}>
                             <Form.Label as='label'>信箱</Form.Label>
-                            <Form.Control type="email" placeholder="輸入信箱地址" ref={emailInputRef} />
+                            <Form.Control type="email" placeholder="輸入信箱地址" ref={emailInputRef} as='input'/>
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword" className={classes.formgroup}>
                             <Form.Label as='label'>密碼</Form.Label>
-                            <Form.Control type="password" placeholder="輸入密碼" className={classes.control} ref={passwordInputRef} />
+                            <Form.Control type="password" placeholder="輸入密碼" className={classes.control} ref={passwordInputRef} as='input'/>
                         </Form.Group>
                     </div>}
                 {!isLoggedIn && (<Button type='submit'>登入</Button>)}

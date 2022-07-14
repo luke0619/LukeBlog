@@ -1,8 +1,9 @@
 import { Carousel } from 'react-bootstrap'
-import apex from '../../assets/apex.jpg';
+import one from '../../assets/one.jpg';
 import elden from '../../assets/ELDEN.jpg';
 import classes from './Carou.module.css';
-import maple from '../../assets/maple.jpg';
+import modern from '../../assets/modern.jpg';
+
 
 const Carou = () => {
     return (
@@ -10,23 +11,24 @@ const Carou = () => {
             <Carousel.Item >
                 <img
                     className='d-block w-100'
-                    src={maple}
+                    src={modern}
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>楓之谷</h3>
-                    <p>懷舊RPG遊戲</p>
+                    <h3>雷蒙娜-山丘</h3>
+                    <p>美國加利福尼亞州</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={apex}
+                    src={one}
                     alt="Second slide"
                 />
 
                 <Carousel.Caption>
-                    <p>經典射擊吃雞遊戲</p>
+                    <h3>101大樓</h3>
+                    <p>臺北-信義區</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>

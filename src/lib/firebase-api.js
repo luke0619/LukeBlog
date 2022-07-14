@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 
 import { getDatabase, ref, remove} from "firebase/database";
-
 const firebaseConfig = {
     apiKey: "AIzaSyAc_eKPAMBhwh1Y6AfcRzywVevsN1bDavs",
     authDomain: "luke-blog-d593d.firebaseapp.com",
@@ -13,7 +12,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+const db = getDatabase(app);
 
 // //更新資料的指令
 // const articleData = {
@@ -27,8 +26,11 @@ const database = getDatabase(app);
 // update(ref(database), updates);
 
 export const removeFirebaseData = (id) => {
-  remove(ref(database, 'quotes/' + id))
+  console.log('觸發刪除事件');
+  const target = ref(db, 'quotes/' + id);
+  remove(target);
 }
+
 
 // 刪除資料的指令
     //方法一

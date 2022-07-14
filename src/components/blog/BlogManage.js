@@ -7,6 +7,7 @@ import { useEffect } from "react";
 
 const BlogManage = () => {
     const { sendRequest, status, data: loadedArticles, error } = useHttp(getAllQuotes, true);
+    
 
     useEffect(() => {
         sendRequest();

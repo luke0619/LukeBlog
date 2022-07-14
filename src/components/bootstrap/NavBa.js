@@ -30,7 +30,7 @@ const NavBa = () => {
                         </Nav>
                     </Navbar.Collapse>
 
-                    <Login />
+                        <Login />
                 </Container>
             </Navbar>
         </Fragment>
