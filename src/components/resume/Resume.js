@@ -12,8 +12,8 @@ const Resume = (props) => {
         <Modal onClose={props.onClose}>
             <div className={classes.popup_content}>
                 <div className={classes.popup_left}>
-                    <img src={couple} alt="Luke photo" className={classes.popup_img1}/>
-                    <img src={sun} alt="Luke photo" className={classes.popup_img2}/>
+                    <img src={couple} alt="#" className={classes.popup_img1}/>
+                    <img src={sun} alt="#" className={classes.popup_img2}/>
                 </div>            
                 <div className={classes.popup_right}>
                     <a onClick={props.onClose} className={classes.popup_close}>&times;</a>
